@@ -8,14 +8,23 @@ SSH -- Secure Shell --> When we create a Key Pair in AWS for windows we download
 ARN -- Amazon Resource Name. For any resource we create in AWS, it creates unqiue identifier, and that is called ARN.
 S3 -- Amazon Simple Storage Service.
 IAM -- 
+RDS -- Relational Database Service
 `Using chmod in Linux, modify the access permissions of files and directories
 
-Using chmod 400 vins.pem we make the file secure`
+Using chmod 400 vins.pem we make the file secure.`
 
 Nginx -- If you don't want SSH in local Linux --> EC2 Instance Connect --> 
 
 SSH port 22
 HTTP port 80
+
+
+--------------------- RDS -----------------
+Each RDS has another replica in another region known as a standby instance. --> Multi - AZ feature
+For a read-heavy application, it provides read replicas.
+How does RDS provide higher IOPS?
+
+
 
 Mapping the inbound port and the outbound port, and using -p, we do port mapping.
 `sudo docker run -p 80:80 nginx`
