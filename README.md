@@ -2170,7 +2170,16 @@ Read Replica → Read Scaling
 
 CloudFront has something called a CloudFront distribution, a configuration, and we can create an Origin Access Control policy (a bucket policy that can be configured in a way such that the bucket remains private and only this CDN can access S3) for secure S3 access.
 
-CloudFront is not a region resource but a global resource.
+> CloudFront is not a region resource but a global resource.
+> We need to provide the origin type, and it is where our content, such as a website or an app, lives. CloudFront works with AWS-based origins and origins hosted on other cloud providers.
+> Let us say a file got cached in one CDN that was serving us, but some new changes have been pushed to that file, and if our earlier-used CDN serves the file, then it will serve it without the latest changes until the TTL expires for the file. When we send the request, it does not go to the closest edge location based on distance; it goes to the nearest edge location/CDN based on the lowest network latency. This is what we mean by the nearest edge location.
+
+CloudFront provides Cache Invalidation, where we provide the path of the object that we want to clear from the CDN, and once it is done, then the CDN will have to bring the files again from the declared origin in the CDN.
+ 
+---
+ # 🧠 AWS Route 53 (DNS - Domain Name System)
+ 
+ We purchase a domain here, and once it is done, go to Certificate Manager and get your registered domain's certificate.
  
 ---
 
