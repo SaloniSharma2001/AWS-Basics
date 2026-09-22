@@ -2156,6 +2156,24 @@ Read Replica → Read Scaling
 
 ---
 
+ # 🧠 AWS CloudFront (CDN - Content Delivery Network)
+
+ We have Region >> AZ >> LocalZone >> Edge
+
+ Now, the edge location (Data centers) is the nearest possible location where the CDN exists to avoid network latency.
+
+ Edge locations cache the content closer to the end users so the round trip becomes extremely short.
+
+ # CloudFront vs Edge Locations
+ > Edge Locations: They are physical site/ Infras
+ > CloudFront: A service that uses these edge locations under the hood to cache and deliver our content. Using these, we ensure what to cache and how long it should be cached.
+
+CloudFront has something called a CloudFront distribution, a configuration, and we can create an Origin Access Control policy (a bucket policy that can be configured in a way such that the bucket remains private and only this CDN can access S3) for secure S3 access.
+
+CloudFront is not a region resource but a global resource.
+ 
+---
+
  # 🧠 Quick Revision
 
  **EC2 = Elastic Compute Cloud**
