@@ -103,7 +103,7 @@
 - Northern Virginia
 - Oregon
 
- A Region is independent from another Region.
+ A Region is independent of another Region.
 
  For example:
 
@@ -386,7 +386,7 @@ ls -l vins.pem
 chmod 400 vins.pem
 ```
 
- This means the owner has read permission while group and others have no permissions.
+ This means the owner has read permission, while group and others have no permissions.
 
  Conceptually:
 
@@ -984,7 +984,7 @@ Application
           100,000 requests
 ```
 
- read replicas can help distribute read workloads.
+ Read replicas can help distribute read workloads.
 
 ---
 
@@ -1421,6 +1421,7 @@ EC2 SG
  This creates a better security boundary.
 
 ---
+# Listener Rules
 
  # 🚦 ALB vs NLB vs GWLB
 
@@ -2157,63 +2158,61 @@ Read Replica → Read Scaling
 
  # 🧠 Quick Revision
 
- \<details\> \<summary\>\<strong\>EC2\</strong\>\</summary\> **EC2 = Elastic Compute Cloud**
+ **EC2 = Elastic Compute Cloud**
 
  A virtual server in AWS.
 
 ```
 EC2 → Compute
 ```
-
- \</details\> \<details\> \<summary\>\<strong\>AMI\</strong\>\</summary\> An AMI is a template used to launch EC2 instances.
+An AMI is a template used to launch EC2 instances.
 
 ```
 AMI → EC2 Template
 ```
 
- \</details\> \<details\> \<summary\>\<strong\>SSH\</strong\>\</summary\> Secure remote access protocol.
+ Secure remote access protocol.
 
 ```
 SSH → Port 22
 ```
 
- \</details\> \<details\> \<summary\>\<strong\>S3\</strong\>\</summary\> Object storage.
+Object storage.
 
 ```
 S3 → Bucket → Object
 ```
 
- \</details\> \<details\> \<summary\>\<strong\>IAM\</strong\>\</summary\> Controls identity and access.
+Controls identity and access.
 
 ```
 IAM → Users / Groups / Roles / Policies
 ```
 
- \</details\> \<details\> \<summary\>\<strong\>RDS\</strong\>\</summary\> Managed relational database service.
+Managed relational database service.
 
 ```
 RDS → Relational Database
 ```
 
- \</details\> \<details\> \<summary\>\<strong\>Multi-AZ\</strong\>\</summary\> Primarily for high availability and failover.
+Primarily for high availability and failover.
 
 ```
 Multi-AZ → HA / Failover
 ```
 
- \</details\> \<details\> \<summary\>\<strong\>Read Replica\</strong\>\</summary\> Primarily for read scaling.
+Primarily for read scaling.
 
 ```
 Read Replica → Read Scaling
 ```
 
- \</details\> \<details\> \<summary\>\<strong\>ALB\</strong\>\</summary\> Application-layer load balancer for HTTP/HTTPS workloads.
+Application-layer load balancer for HTTP/HTTPS workloads.
 
 ```
 ALB → Listener → Target Group → Targets
 ```
-
- \</details\> \<details\> \<summary\>\<strong\>Target Group\</strong\>\</summary\> Logical collection of targets behind a load balancer.
+Logical collection of targets behind a load balancer.
 
 ```
 Target Group
@@ -2222,7 +2221,7 @@ Target Group
 └── EC2
 ```
 
- \</details\> \<details\> \<summary\>\<strong\>Health Check\</strong\>\</summary\> Used by the load balancer to determine whether a target is healthy.
+Used by the load balancer to determine whether a target is healthy.
 
 ```
 GET /health
@@ -2232,7 +2231,7 @@ GET /health
  Healthy
 ```
 
- \</details\> \<details\> \<summary\>\<strong\>Docker Port Mapping\</strong\>\</summary\>
+Docker Port Mapping
 ```
 -p HOST_PORT:CONTAINER_PORT
 ```
